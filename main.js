@@ -1,4 +1,5 @@
 $(document).ready(function(){
+   // Parallax Code
    // cache the window object
    $window = $(window);
  
@@ -16,6 +17,24 @@ $(document).ready(function(){
  
         // move the background
         $scroll.css({ backgroundPosition: coords });    
+
       }); // end window scroll
-   });  // end section function
-}); // close out script
+   });  // end parallax section
+
+   // registration button click event handler
+   $(document).on('click','.registration-btn',function(){
+   		// code
+   });
+
+   // close registration event handler 
+   $(document).on('click','.close-lightbox',function(){
+   		// hide the lightbox
+   		$(this).closest('.lightbox-container').hide();
+   });
+
+   // click through registration click event handler
+   $(document).on('click','.accept-registration',function(){
+
+   });
+
+}); // close out script (document ready)
