@@ -1,17 +1,21 @@
-.registration-btn,
+.finish-registration,
 .signup-btn {
   width: 60%;
   background-color: #ff832b;
 }
-.registration-btn:active, .registration-btn:visited, .registration-btn:focus,
+.finish-registration:active, .finish-registration:visited, .finish-registration:focus,
 .signup-btn:active,
 .signup-btn:visited,
 .signup-btn:focus {
   background: #ffa15e;
 }
-.registration-btn:hover,
+.finish-registration:hover,
 .signup-btn:hover {
   background: #ffbf91;
+}
+
+.finish-registration {
+  width: 50%;
 }
 
 .form-control {
@@ -27,9 +31,9 @@
 }
 
 .lightbox {
-  background-color: #679e71;
+  background-color: #c4dac8;
   position: fixed;
-  width: 90%;
+  width: 100%;
 }
 
 .lightbox-alert {
@@ -57,8 +61,13 @@
   cursor: pointer;
 }
 
-a {
-  color: blue;
+.close-lightbox-link {
+  color: #3e6144;
+  cursor: pointer;
+}
+.close-lightbox-link:hover {
+  color: #a5c6ab;
+  text-decoration: none;
 }
 
 h3 {
@@ -68,4 +77,5 @@ h3 {
 
 .alert-danger {
   margin: 2rem;
+  text-align: left;
 }

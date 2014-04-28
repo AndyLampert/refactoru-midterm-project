@@ -1,0 +1,16 @@
+## Tasks
+  1. ~~Get the lightbox to work~~
+    1. going to set up multiple sign up buttons that bring up a lightbox
+      1. add a 3 step horizontal scrolling for the data or put it all in one popup?
+  3. fix the picture sizing in the parallax scroll
+  4. create a home page with fake profiles
+
+## Technologies and Sources
+[Flickr Creative Commons-licensed content](https://www.flickr.com/search/advanced/)
+[Twitter Bootstrap](http://getbootstrap.com/)
+[Parallax Scrolling Guide](http://untame.net/2013/04/how-to-integrate-simple-parallax-with-twitter-bootstrap/)
+[BootStrap Lightbox](http://www.jasonbutz.info/bootstrap-lightbox/)
+
+
+### requirements
+http://spring2014-refactoru-students.herokuapp.com/exercises/project/midterm

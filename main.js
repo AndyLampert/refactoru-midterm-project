@@ -18,7 +18,7 @@ $(document).ready(function(){
    //      var coords = '50% '+ yPos + 'px';
  
    //      // move the background
-   //      $scroll.css({ backgroundPosition: coords });    
+   //     	 $scroll.css({ backgroundPosition: coords });    
 
    //    }); // end window scroll
    // });  // end parallax section
@@ -27,7 +27,16 @@ $(document).ready(function(){
    $(document).on('click','.registration-btn',function(){
     	// Validation
     	if ($ ('#user-name').text()  === '') {
-    		
+    		console.log('enter your name')
+    	}
+    	if ($ ('#user-email').text() === '') {
+    		console.log('enter your email')
+    	}
+    	if ($ ('#user-password').text() === '') {
+    		console.log('enter your password')
+    	}
+    	if ($ ('#user-password-check').text() === '') {
+    		console.log('enter your password check')
     	}
    });
 

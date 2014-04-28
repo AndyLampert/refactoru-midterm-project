@@ -6,7 +6,7 @@ $flatBeige: #F7F09E;
 $flatGreen: #679E71;
 
 // Sign up Button 
-.registration-btn,
+.finish-registration,
 .signup-btn {
     width: 60%;
     background-color: $flatOrange;
@@ -18,6 +18,10 @@ $flatGreen: #679E71;
     &:hover {
         background: lighten($flatOrange, 20%);
     }
+}
+
+.finish-registration {
+    width: 50%;
 }
 
 .form-control {
@@ -34,11 +38,11 @@ $flatGreen: #679E71;
 }
 
 .lightbox {
-     background-color: $flatGreen;
+     background-color: lighten($flatGreen, 30%);
      // opacity: ;
      position: fixed;
      // height: 100%;
-     width: 90%;
+     width: 100%;
 }
 
 .lightbox-alert, {
@@ -66,9 +70,14 @@ $flatGreen: #679E71;
      }
 }
 
-// remove link color
-a {
-    color: blue;
+// Cancel Registration link text in the lightbox
+.close-lightbox-link {
+    color: darken($flatGreen, 20%);
+    cursor: pointer;
+    &:hover {
+        color: lighten($flatGreen, 20%);
+        text-decoration: none;
+    }
 }
 
 h3 {
@@ -76,7 +85,8 @@ h3 {
     text-shadow: 0px 1px 5px rgba(55,55,55,.4);
 }
 
-// padding on the lightbox
+// padding on the lightbox error messages
 .alert-danger {
     margin: 2rem;
+    text-align: left;
 }
