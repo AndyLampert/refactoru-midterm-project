@@ -25,7 +25,10 @@ $(document).ready(function(){
 
    // registration button click event handler
    $(document).on('click','.registration-btn',function(){
-    	// code
+    	// Validation
+    	if ($ ('#user-name').text()  === '') {
+    		
+    	}
    });
 
     // close registration event handler 
@@ -36,12 +39,13 @@ $(document).ready(function(){
 
     // sign up button click event handler
     $(document).on('click','.signup-btn',function(){
-    $('.lightbox-container').css('display','inline-block');
+    	$('.lightbox-container').css('display','inline-block');
     });
 
     // click through registration click event handler
     $(document).on('click','.accept-registration',function(){
 
     });
+
 
 }); // close out script (document ready)
