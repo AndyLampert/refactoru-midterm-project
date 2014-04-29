@@ -1,16 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="" lang="en">
 <head>
   <meta charset="utf-8">
   <title>Untitled</title>
   <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="bootstrap-lightbox/bootstrap-lightbox.min.css">
   <link rel="stylesheet" type="text/css" href="main.css">
-
 </head>
-<body>
+<body class="">
 
-	<nav class="main-nav navbar navbar-default" role="navigation">
+	<nav class="rainbow-border main-nav navbar navbar-default" role="navigation">
 		  <div class="container-fluid">
 			<!-- Brand and toggle get grouped for better mobile display -->
 			<div class="navbar-header">
@@ -25,16 +23,14 @@
 			  <ul class="nav navbar-nav">
 					<li class="active custom-active"><a href="#" class="">Home</a></li>
 			  </ul>
-			  
 			  <ul class="nav navbar-nav navbar-right">
 				<li><a href="#">Edit/View Profile</a></li>
 				<li><a href="#">Logout</a></li>
-
 			  </ul>
 			</div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
-
+		
 <div class="container">
 	<div class="page-header">
 		<h1 class="center text-center">No BS Dating</h1>
@@ -49,23 +45,24 @@
 							<div class="form-group">
 								<input type="text" id="user-name" class="form-control" placeholder="User Name">
 								<input type="text" id="user-email" class="form-control" placeholder="Email">
-								<input type="text" id="user-password" class="form-control" placeholder="Password">
-								<input type="text" id="user-password-check" class="form-control" placeholder="Password x2">
+								<input type="password" id="user-password" class="form-control" placeholder="Password">
+								<input type="password" id="user-password-check" class="form-control" placeholder="Password Confirmation">
 							</div>
 							<div class="hide alert alert-danger">
-								<p class="bg-danger hide" id="user-name-error">Don't forget your User Name!</p>
-								<p class="bg-danger hide" id="email-empty-error">Don't forget your Email!</p>
-								<p class="bg-danger hide" id="email-invalid-error">Invalid Email!</p>
-								<p class="bg-danger hide" id="password-empty-error">Don't forget your Password!</p>
-								<p class="bg-danger hide" id="password-confirm-error">Please confirm your Password!</p>
-								<p class="bg-danger hide" id="password-match-error">Passwords don't match!</p>
+								<p class="bg-danger" id="user-name-error">Don't forget your User Name!</p>
+								<p class="bg-danger" id="user-name-length-error">Your User Name needs to be between 6-18 characters!</p>
+								<p class="bg-danger" id="email-empty-error">Don't forget your Email!</p>
+								<p class="bg-danger" id="email-invalid-error">Invalid Email!</p>
+								<p class="bg-danger" id="password-empty-error">Don't forget your Password!</p>
+								<p class="bg-danger" id="password-confirm-error">Please confirm your Password!</p>
+								<p class="bg-danger" id="password-match-error">Passwords don't match!</p>
 							</div>
 						</form>
 
 					</div>
-					<div class="col-sm-6">
+					<div class="col-sm-6 text-center">
 						<h4>Say goodbye to these:</h4>
-						<img src="img/party-girls-2.jpg" width="200px" height="200px" class="img-circle" alt="">
+						<img src="img/yoga-behind.jpg" width="200px" height="200px" class="img-circle" alt="">
 						<button type="submit" class="custom-btn custom-wide-btn finish-registration btn btn-default form-control">Sign Up Now!</button>
 		                		<div class="">
 		                			<a class="close-lightbox-link">Cancel Registration</a>
@@ -74,8 +71,6 @@
 
 					</div>
 						<div class="text-right">
-							
-
 				</div>
 	    </div>
 	</div>

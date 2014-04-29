@@ -1,70 +1,58 @@
 $(document).ready(function(){
-	// Parallax Code
-	// cache the window object
-	$window = $(window);
- 
+
 	// Code from Raine
-	$(window).on('scroll', function() {
-		var y = $(window).scrollTop();
-		$([parallaxImage]).css({
-			top: -y
-		})
-	});
+	// $(window).on('scroll', function() {
+	// 	var y = $(window).scrollTop();
+	// 	$([parallaxImage]).css({
+	// 		top: -y
+	// 	})
+	// });
 
-	// code from the site
-	// $('section[data-type="background"]').each(function(){
-	//   // declare the variable to affect the defined data-type
-	//   var $scroll = $(this);
-					 
-	//    $(window).scroll(function() {
-	//      // HTML5 proves useful for helping with creating JS functions!
-	//      // also, negative value because we're scrolling upwards                          
-		
-	//      // not going to use the 'speed'??
-	//      var yPos = -($window.scrollTop() / $scroll.data('speed')); 
-		 
-	//      // background position
-	//      var coords = '50% '+ yPos + 'px';
- 
-	//      // move the background
-	//     	 $scroll.css({ backgroundPosition: coords });    
-
-	//    }); // end window scroll
-	// });  // end parallax section
 
 	// registration button click event handler
 	$(document).on('click','.finish-registration',function(){
+		$('.alert-danger, .alert-danger > p').addClass('hide');
+		// add .hide to ALL error messages on click
+		// reason is it's easier to keep track of what should show up when something happens
+
 		// variable that finds the parent .lightbox
 		var lightbox = $(this).closest('.lightbox');
+		var userNameLength = $('#user-name').val().length
 		// Validation
 		// Check username
-		if ($ ('#user-name').val()  === '') {
+		// 
+		// if user name = space or nothing
+		// add error (remove hide class)
+		// 
+		// if username != 6-18 characters
+		// add error (add hide class)
+
+		// check user name input
+		if ($('#user-name').val() === '' || $('#user-name').val() === ' ') {
 			lightbox.find('.alert-danger').removeClass('hide');
 			lightbox.find('#user-name-error').removeClass('hide');
 		} 
-		else if(true) {}
-			// username is more than 4 characters
-		
-		// check user email
+		// check user name is between 6-18 characters
+		else if(userNameLength < 6 || userNameLength > 18){
+			lightbox.find('#user-name-length-error').removeClass('hide');
+		}
+		// check user email input
 		if ($ ('#user-email').val() === '') {
 			lightbox.find('.alert-danger').removeClass('hide');
 			lightbox.find('#email-empty-error').removeClass('hide');
-		}
-		// check password
+		} 
+		// check password input
 		if ($ ('#user-password').val() === '') {
 			lightbox.find('.alert-danger').removeClass('hide');
 			lightbox.find('#password-empty-error').removeClass('hide');
 		} 
-		// else if() {}
-			// password is at least 6 characters
-		
-		// check password confirm
+		// check password confirm input
 		if ($ ('#user-password-check').val() === ''){
 			lightbox.find('.alert-danger').removeClass('hide');
 			lightbox.find('#password-confirm-error').removeClass('hide');
 		}
 		// matching passwords check
-		if ($ ('#user-password-check').val() === '') {
+		if ( $('#user-password').val() !== $('#user-password-check').val()) {
 			lightbox.find('.alert-danger').removeClass('hide');
 			lightbox.find('#password-match-error').removeClass('hide');	
 		}

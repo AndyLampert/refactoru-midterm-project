@@ -12,8 +12,24 @@ $orange: #f39c12;
 $sunflower: #f1c40f;
 $darkPurple: #8e44ad;
 
+body { 
+  background: url(img/tokyo-crab.jpg) no-repeat center center fixed; 
+  background-size: cover;
+}
+
+// rainbow border
+@-webkit-keyframes rainbow {
+  0% {border-color: hsl(0, 100%, 50%);}
+  100% {border-color: hsl(255, 100%, 50%);}
+}
+ 
+.rainbow-border {
+  border: 4px solid hsl(0, 100%, 50%);
+  -webkit-animation: rainbow 3s infinite alternate;
+}
+
 body {
-    background-color: lighten($cloudy, 10%);
+    // background-color: lighten($cloudy, 10%);
 }
 
 // Custom Button 
@@ -47,7 +63,7 @@ body {
      position: absolute;
      top: 0;
      left: 0;
-     display: none;
+     // display: none;
 }
 
 .lightbox {
@@ -57,7 +73,7 @@ body {
      // height: 100%;
      width: 100%;
      height: 100%;
-     top: 51px;
+     top: 54px;
 }
 
 .lightbox-alert {
@@ -111,7 +127,7 @@ body {
     border: 0;
     border-radius: 0;
     background-color: darken($cloudy, 5%);
-    border-bottom: 1px solid black;
+    border-bottom: 4px solid black;
 }
 
 .active>a {
@@ -121,9 +137,20 @@ body {
     }
 }
 
+.navbar-brand {
+    // position: absolute;
+    // left: 50%;
+}
+
 .navbar-nav > li > a:hover {
     background-color: $orange !important;
 }
+
+// .navbar {
+//     width:600px;
+//     margin:0 auto;
+//     display:block;
+// }
 
 // .navbar-toggle:hover {
 //     background-color: $orange !important;
