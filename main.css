@@ -1,3 +1,7 @@
+body {
+  background-color: white;
+}
+
 .custom-btn {
   width: 60%;
   background-color: #ff832b;
@@ -26,9 +30,11 @@
 }
 
 .lightbox {
-  background-color: #c4dac8;
+  background-color: #ecf0f1;
   position: fixed;
   width: 100%;
+  height: 100%;
+  top: 51px;
 }
 
 .lightbox-alert {
@@ -61,11 +67,29 @@
   cursor: pointer;
 }
 .close-lightbox-link:hover {
-  color: #a5c6ab;
+  color: #162318;
   text-decoration: none;
 }
 
 .alert-danger {
   text-align: left;
   line-height: 1.4;
+}
+
+.main-nav {
+  border: 0;
+  border-radius: 0;
+  background-color: #dde4e6;
+  border-bottom: 1px solid black;
+}
+
+.active > a {
+  background-color: #f8c573 !important;
+}
+.active > a:hover {
+  background-color: #f39c12 !important;
+}
+
+.navbar-nav > li > a:hover {
+  background-color: #f39c12 !important;
 }
