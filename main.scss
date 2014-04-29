@@ -12,10 +12,10 @@ $orange: #f39c12;
 $sunflower: #f1c40f;
 $darkPurple: #8e44ad;
 
-body { 
-  background: url(img/tokyo-crab.jpg) no-repeat center center fixed; 
-  background-size: cover;
-}
+// body { 
+//   background: url(img/tokyo-crab.jpg) no-repeat center center fixed; 
+//   background-size: cover;
+// }
 
 // rainbow border
 @-webkit-keyframes rainbow {
@@ -146,6 +146,16 @@ body {
     background-color: $orange !important;
 }
 
+.custom-navbar-container {
+    text-align: center;
+    position: absolute;
+}
+
+// USER INFO
+.user-profile-details {
+    display: block;
+}
+
 // .navbar {
 //     width:600px;
 //     margin:0 auto;
@@ -158,6 +168,8 @@ body {
 // ONLY FOR JS
 // .signup-btn
 // .finish-registration
+// .edit-profile-btn
+// .save-profile-btn
 // 
 // ONLY FOR STYLING
 // .custom-btn

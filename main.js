@@ -8,6 +8,12 @@ $(document).ready(function(){
 	// 	})
 	// });
 
+	// code from Mike
+	// $(window).on('resize',function(){
+	// 	$('div').height(window.innerHeight+'px');
+	// 	});
+
+	// 	$('div').height(window.innerHeight+'px');
 
 	// registration button click event handler
 	$(document).on('click','.finish-registration',function(){
