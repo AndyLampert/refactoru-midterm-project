@@ -9,8 +9,8 @@
   background: #ffbf91;
 }
 
-.custom-narrow-btn {
-  width: 50%;
+.custom-wide-btn {
+  width: 100%;
 }
 
 .form-control {
@@ -68,5 +68,4 @@
 .alert-danger {
   text-align: left;
   line-height: 1.4;
-  display: none;
 }

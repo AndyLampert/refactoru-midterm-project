@@ -6,14 +6,14 @@ $(document).ready(function(){
    // $('section[data-type="background"]').each(function(){
    //   // declare the variable to affect the defined data-type
    //   var $scroll = $(this);
-                     
+					 
    //    $(window).scroll(function() {
    //      // HTML5 proves useful for helping with creating JS functions!
    //      // also, negative value because we're scrolling upwards                          
-        
+		
    //      // not going to use the 'speed'??
    //      var yPos = -($window.scrollTop() / $scroll.data('speed')); 
-         
+		 
    //      // background position
    //      var coords = '50% '+ yPos + 'px';
  
@@ -25,41 +25,51 @@ $(document).ready(function(){
 
    // registration button click event handler
    $(document).on('click','.finish-registration',function(){
-    	// Validation
-    	if ($ ('#user-name').text()  === '') {
-    		// replace console log with a statement
-    		// that selects the specific danger p
-    		// for that error
-    		// then SHOW the error message
-    		$('#user-name-error').css('display','block');
-    	}
-    	if ($ ('#user-email').text() === '') {
-    		$('#email-empty-error').css('display','block');
-    	}
-    	if ($ ('#user-password').text() === '') {
-    		$('#password-empty-error').css('display','block');
-    	}
-    	if ($ ('#user-password-check').text() === '') {
-    		$('#password-match-error').css('display','block');
-
-    	}
+		// variable that finds the parent .lightbox
+		var lightbox = $(this).closest('.lightbox');
+		// Validation
+		// Check username
+		if ($ ('#user-name').text()  === '') {
+			lightbox.find('.alert-danger').removeClass('hide');
+			lightbox.find('#user-name-error').removeClass('hide');
+		}
+		// check user email
+		if ($ ('#user-email').text() === '') {
+			lightbox.find('.alert-danger').removeClass('hide');
+			lightbox.find('#email-empty-error').removeClass('hide');
+		}
+		// check password
+		if ($ ('#user-password').text() === '') {
+			lightbox.find('.alert-danger').removeClass('hide');
+			lightbox.find('#password-empty-error').removeClass('hide');
+		}
+		// check password confirm
+		if ($ ('#user-password-check').text() === ''){
+			lightbox.find('.alert-danger').removeClass('hide');
+			lightbox.find('#password-confirm-error').removeClass('hide');
+		}
+		// matching passwords check
+		if ($ ('#user-password-check').text() === '') {
+			lightbox.find('.alert-danger').removeClass('hide');
+			lightbox.find('#password-match-error').removeClass('hide');	
+		}
    });
 
-    // close registration event handler 
-    $(document).on('click','.close-lightbox-link',function(){
-    	// hide the lightbox
-    	$(this).closest('.lightbox-container').css('display','none');
-    });
+	// close registration event handler 
+	$(document).on('click','.close-lightbox-link',function(){
+		// hide the lightbox
+		$(this).closest('.lightbox-container').css('display','none');
+	});
 
-    // sign up button click event handler
-    $(document).on('click','.signup-btn',function(){
-    	$('.lightbox-container').css('display','inline-block');
-    });
+	// sign up button click event handler
+	$(document).on('click','.signup-btn',function(){
+		$('.lightbox-container').css('display','inline-block');
+	});
 
-    // click through registration click event handler
-    $(document).on('click','.accept-registration',function(){
+	// click through registration click event handler
+	$(document).on('click','.accept-registration',function(){
 
-    });
+	});
 
 
 }); // close out script (document ready)
