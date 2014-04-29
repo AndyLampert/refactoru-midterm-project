@@ -21,10 +21,10 @@
 			<!-- Collect the nav links, forms, and other content for toggling -->
 			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			  <ul class="nav navbar-nav">
-					<li class="active custom-active"><a href="#" class="">Home</a></li>
+					<li class="active custom-active"><a href="index.html" class="">Home</a></li>
 			  </ul>
 			  <ul class="nav navbar-nav navbar-right">
-				<li><a href="#">Edit/View Profile</a></li>
+				<li><a href="profile.html">Edit/View Profile</a></li>
 				<li><a href="#">Logout</a></li>
 			  </ul>
 			</div><!-- /.navbar-collapse -->
@@ -43,11 +43,40 @@
                     </div>
                     <div class="col-sm-6 center">
                         <h4>Andy Lampert</h4>
-                        	<p class="user-profile-details user-profile-location">Boulder, CO <i class="fa fa-map-marker"></i></p>
-                        	<p class="user-profile-details user-profile-location">Likes Women <i class="fa fa-female"></i></p>
-                        	<p class="user-profile-details user-profile-location">Aged 25-32 <i class="fa fa-check"></i></p>
-                        	<p class="user-profile-details user-profile-location">Ready for love! <i class="fa fa-heart-o"></i></i></p>
-                        
+							<!-- Display profile form fields -->
+                        	<p class="user-profile-details user-profile-location"><i class="fa fa-map-marker"> Boulder, CO </i></p>
+                        	<p class="user-profile-details user-profile-location"><i class="fa fa-female"></i> Likes <strong>Women</strong></p>
+                        	<p class="user-profile-details user-profile-location"><i class="fa fa-check"></i> Age: <strong>25-32</strong></p>
+                        	<p class="user-profile-details user-profile-location"><i class="fa fa-heart-o"></i> Ready for <strong>love!</strong></p>
+							
+							<!-- Editable profile form fields  -->
+							<p><input class="user-edit-location" type="text" placeholder="Where are you?"></p>
+							<p>Likes: <select name="" id="" class="user-edit-likes">
+								<option value="">Women!</option>
+								<option value="">Men!</option>
+								<option value="">Everyone!</option>
+							</select></p>
+							<p>Age: 
+								<select name="" id="" class="user-edit-age-min">
+									<option value="">18</option>
+									<option value="">20</option>
+									<option value="">22</option>
+								</select>
+								to
+								<select name="" id="" class="user-edit-age-max">
+									<option value="">18</option>
+									<option value="">20</option>
+									<option value="">22</option>
+								</select>
+							</p>
+							<p>
+								Ready for: <select class="user-edit-ready">
+								  <option>fun!</option>
+								  <option>dating!</option>
+								  <option>love!</option>
+								</select>
+							</p>
+
                         <!-- Split button -->
                         <div class="btn-group">
                             <button type="button" class="btn btn-primary edit-profile-btn">Edit Profile</button>

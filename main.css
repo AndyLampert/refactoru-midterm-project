@@ -112,3 +112,7 @@
 .user-profile-details {
   display: block;
 }
+
+.ready-for-selector {
+  display: none;
+}

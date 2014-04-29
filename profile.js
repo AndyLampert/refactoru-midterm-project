@@ -12,12 +12,7 @@ $(document).on('ready',function(){
 		
 		// $(this).text('Edit Profile');
 		
+		$('.ready-for-selector').addClass('hide'); 
 	})
 
-	
-
-	// 
-	// event handler for saving profile
-	// 
-	// 1) change the text back to "edit profile"
 });
