@@ -24,19 +24,24 @@ $(document).ready(function(){
    // });  // end parallax section
 
    // registration button click event handler
-   $(document).on('click','.registration-btn',function(){
+   $(document).on('click','.finish-registration',function(){
     	// Validation
     	if ($ ('#user-name').text()  === '') {
-    		console.log('enter your name')
+    		// replace console log with a statement
+    		// that selects the specific danger p
+    		// for that error
+    		// then SHOW the error message
+    		$('#user-name-error').css('display','block');
     	}
     	if ($ ('#user-email').text() === '') {
-    		console.log('enter your email')
+    		$('#email-empty-error').css('display','block');
     	}
     	if ($ ('#user-password').text() === '') {
-    		console.log('enter your password')
+    		$('#password-empty-error').css('display','block');
     	}
     	if ($ ('#user-password-check').text() === '') {
-    		console.log('enter your password check')
+    		$('#password-match-error').css('display','block');
+
     	}
    });
 

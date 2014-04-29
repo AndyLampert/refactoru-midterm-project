@@ -28,23 +28,13 @@
 								<input type="text" id="user-password" class="form-control" placeholder="Password">
 								<input type="text" id="user-password-check" class="form-control" placeholder="Password x2">
 							</div>
-								<div class="alert-danger">
-									<p class="bg-danger">Don't forget your User Name!</p>
-								</div>
-								<div class="alert-danger">
-									<p class="bg-danger">Don't forget your Email!</p>
-								</div>
-								<div class="alert-danger">
-									<p class="bg-danger">Invalid Email!</p>
-								</div>
-								<div class="alert-danger">
-									<p class="bg-danger">Don't forget your Password!</p>
-								</div>
-								<div class="alert-danger">
-									<p class="bg-danger">Please confirm your Password!</p>
-								</div>
-								<div class="alert-danger">
-									<p class="bg-danger">Passwords don't match!</p>
+								<div class="alert alert-danger">
+									<p class="bg-danger" id="user-name-error">Don't forget your User Name!</p>
+									<p class="bg-danger" id="email-empty-error">Don't forget your Email!</p>
+									<p class="bg-danger" id="email-invalid-error">Invalid Email!</p>
+									<p class="bg-danger" id="password-empty-error">Don't forget your Password!</p>
+									<p class="bg-danger" id="password-confirm-error">Please confirm your Password!</p>
+									<p class="bg-danger" id="password-match-error">Passwords don't match!</p>
 								</div>
 						</form>
 
@@ -55,12 +45,12 @@
 
 					</div>
 						<div class="text-right">
-							<button type="submit" class="finish-registration btn btn-default form-control">Sign Up Now!</button>
+							<button type="submit" class="custom-btn custom-narrow-btn finish-registration btn btn-default form-control">Sign Up Now!</button>
+							<div class="custom-btn cancel-class">
+		                		<a class="close-lightbox-link">Cancel Registration</a>
+		            		</div>
 						</div>
 
-						<div class="col-sm-6">
-	                		<a class="close-lightbox-link">Cancel Registration</a>
-	            		</div>
 				</div>
 	    </div>
 	</div>
@@ -73,7 +63,7 @@
 		</div>
 	</div>
  -->
-	<button class="signup-btn btn btn-default btn-lg btn-block center-block">Sign Up Now!</button>
+	<button class="signup-btn custom-btn btn btn-default btn-lg btn-block center-block">Sign Up Now!</button>
 
 	</div>
 

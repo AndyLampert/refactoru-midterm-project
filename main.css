@@ -1,20 +1,15 @@
-.finish-registration,
-.signup-btn {
+.custom-btn {
   width: 60%;
   background-color: #ff832b;
 }
-.finish-registration:active, .finish-registration:visited, .finish-registration:focus,
-.signup-btn:active,
-.signup-btn:visited,
-.signup-btn:focus {
+.custom-btn:active, .custom-btn:visited, .custom-btn:focus {
   background: #ffa15e;
 }
-.finish-registration:hover,
-.signup-btn:hover {
+.custom-btn:hover {
   background: #ffbf91;
 }
 
-.finish-registration {
+.custom-narrow-btn {
   width: 50%;
 }
 
@@ -70,12 +65,8 @@
   text-decoration: none;
 }
 
-h3 {
-  color: white;
-  text-shadow: 0px 1px 5px rgba(55, 55, 55, 0.4);
-}
-
 .alert-danger {
-  margin: 2rem;
   text-align: left;
+  line-height: 1.4;
+  display: none;
 }

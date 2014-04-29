@@ -5,9 +5,8 @@ $flatTan: #FFCC62;
 $flatBeige: #F7F09E;
 $flatGreen: #679E71;
 
-// Sign up Button 
-.finish-registration,
-.signup-btn {
+// Custom Button 
+.custom-btn {
     width: 60%;
     background-color: $flatOrange;
     &:active,
@@ -20,7 +19,7 @@ $flatGreen: #679E71;
     }
 }
 
-.finish-registration {
+.custom-narrow-btn {
     width: 50%;
 }
 
@@ -28,6 +27,9 @@ $flatGreen: #679E71;
     margin: 1rem 0;
 }
 
+.form-control:hover {
+
+}
 // custom lightbox
 .lightbox-container {
      z-index: 3;
@@ -45,7 +47,7 @@ $flatGreen: #679E71;
      width: 100%;
 }
 
-.lightbox-alert, {
+.lightbox-alert {
      margin: 10% auto;
      border-radius: 5px;
      background-color: white;
@@ -80,13 +82,23 @@ $flatGreen: #679E71;
     }
 }
 
-h3 {
-    color: white;
-    text-shadow: 0px 1px 5px rgba(55,55,55,.4);
-}
+// h3 {
+//     color: white;
+//     text-shadow: 0px 1px 5px rgba(55,55,55,.4);
+// }
 
 // padding on the lightbox error messages
 .alert-danger {
-    margin: 2rem;
     text-align: left;
+    line-height: 1.4;
+    display: none;
 }
+
+
+// ONLY FOR JS
+// .signup-btn
+// .finish-registration
+// 
+// ONLY FOR STYLING
+// .custom-btn
+// .custom-narrow-btn
