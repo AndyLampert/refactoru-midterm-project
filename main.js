@@ -1,5 +1,18 @@
-$(document).ready(function(){
+//@prepros-prepend nav.js
+//@prepros-prepend profile.js
+//@prepros-prepend constructor.js
+//@prepros-prepend backstretch.js
 
+$(document).ready(function(){
+	$("#yoga-headstand-legs").backstretch("img/yoga-headstand-legs.jpg");
+	$("#snowboard-girl").backstretch("img/snowboard-girl-1.jpg");
+	$("#party-girls-1").backstretch("img/party-girls-1.jpg");
+	$("#yoga-faraway").backstretch("img/yoga-faraway.jpg");
+	$(window).on('resize',function(){
+		$('.background-wrapper').height(window.innerHeight+'px');
+	});
+
+	$('.background-wrapper').height(window.innerHeight+'px');
 	// Code from Raine
 	// $(window).on('scroll', function() {
 	// 	var y = $(window).scrollTop();
@@ -26,10 +39,10 @@ $(document).ready(function(){
 		var userNameLength = $('#user-name').val().length
 		// Validation
 		// Check username
-		// 
+		//
 		// if user name = space or nothing
 		// add error (remove hide class)
-		// 
+		//
 		// if username != 6-18 characters
 		// add error (add hide class)
 
@@ -37,7 +50,7 @@ $(document).ready(function(){
 		if ($('#user-name').val() === '' || $('#user-name').val() === ' ') {
 			lightbox.find('.alert-danger').removeClass('hide');
 			lightbox.find('#user-name-error').removeClass('hide');
-		} 
+		}
 		// check user name is between 6-18 characters
 		else if(userNameLength < 6 || userNameLength > 18){
 			lightbox.find('#user-name-length-error').removeClass('hide');
@@ -46,12 +59,12 @@ $(document).ready(function(){
 		if ($ ('#user-email').val() === '') {
 			lightbox.find('.alert-danger').removeClass('hide');
 			lightbox.find('#email-empty-error').removeClass('hide');
-		} 
+		}
 		// check password input
 		if ($ ('#user-password').val() === '') {
 			lightbox.find('.alert-danger').removeClass('hide');
 			lightbox.find('#password-empty-error').removeClass('hide');
-		} 
+		}
 		// check password confirm input
 		if ($ ('#user-password-check').val() === ''){
 			lightbox.find('.alert-danger').removeClass('hide');
@@ -60,11 +73,11 @@ $(document).ready(function(){
 		// matching passwords check
 		if ( $('#user-password').val() !== $('#user-password-check').val()) {
 			lightbox.find('.alert-danger').removeClass('hide');
-			lightbox.find('#password-match-error').removeClass('hide');	
+			lightbox.find('#password-match-error').removeClass('hide');
 		}
 	});
 
-	// close registration event handler 
+	// close registration event handler
 	$(document).on('click','.close-lightbox-link',function(){
 		// hide the lightbox
 		$(this).closest('.lightbox-container').css('display','none');

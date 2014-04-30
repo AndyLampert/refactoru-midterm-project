@@ -21,6 +21,8 @@ $(document).on('ready',function(){
 			$('.user-editable-field').addClass('hide');
 		}
 
+
+		
 	});
 
 });
