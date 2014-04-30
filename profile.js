@@ -22,7 +22,33 @@ $(document).on('ready',function(){
 		}
 
 
-		
+
 	});
 
 });
+
+// default
+// 
+// all has
+// .user-profile-details
+//   
+// individual classes
+// .user-profile-location
+// .user-profile-likes
+// .user-profile-age
+// .user-profile-ready
+// 
+// 
+// editable
+// all has
+// .user-editable-field
+// 
+// individual classes
+// .user-edit-location
+// .user-edit-likes
+// .user-edit-age-min
+// .user-edit-age-max
+// .user-edit-ready
+
+
+

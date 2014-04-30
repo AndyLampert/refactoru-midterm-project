@@ -11,6 +11,7 @@
 .rainbow-border {
   border: 4px solid red;
   -webkit-animation: rainbow 3s infinite alternate;
+  margin-bottom: 0;
 }
 
 .custom-btn {
@@ -37,6 +38,7 @@
   position: absolute;
   top: 0;
   left: 0;
+  display: none;
 }
 
 .lightbox {
@@ -111,4 +113,18 @@
 
 .user-profile-details {
   display: block;
+}
+
+.page-header {
+  padding: 0 !important;
+  margin: 0 !important;
+  border-bottom: 0;
+  position: fixed;
+  top: 20%;
+  right: 5%;
+  z-index: 200;
+}
+
+.site-title-header {
+  margin: 0;
 }

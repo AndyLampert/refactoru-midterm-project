@@ -26,6 +26,7 @@ $darkPurple: #8e44ad;
 .rainbow-border {
   border: 4px solid hsl(0, 100%, 50%);
   -webkit-animation: rainbow 3s infinite alternate;
+  margin-bottom: 0;
 }
 
 body {
@@ -63,15 +64,12 @@ body {
      position: absolute;
      top: 0;
      left: 0;
-     // display: none;
+     display: none;
 }
 
 .lightbox {
-     // background-color: darken($cloudy, 0%);
      background-color: rgba(red($cloudy), green($cloudy), blue($cloudy),.6);
-     // opacity: ;
      position: fixed;
-     // height: 100%;
      width: 100%;
      height: 100%;
      top: 0;
@@ -111,11 +109,6 @@ body {
         text-decoration: none;
     }
 }
-
-// h3 {
-//     color: white;
-//     text-shadow: 0px 1px 5px rgba(55,55,55,.4);
-// }
 
 // padding on the lightbox error messages
 .alert-danger {
@@ -161,6 +154,20 @@ body {
     // display: none;
 }
 
+// removing default padding and other styles
+.page-header {
+    padding: 0 !important;
+    margin: 0 !important;
+    border-bottom: 0;
+    position: fixed;
+    top: 20%;
+    right: 5%;
+    z-index: 200;
+}
+
+.site-title-header {
+    margin: 0;
+}
 //
 
 // .navbar {

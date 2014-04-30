@@ -7,26 +7,7 @@ var pageName = fileLocation[(fileLocation.length - 1)];
 // added custom data-page attribute to anchor tags in html files
 
 $(document).on('ready',function(){
-	// if(pageName === 'profile.html'){
-		// add active class to edit/view profile
-	// }
-	// if the page is profile.html, highlight an item
-
+	// adds the class .active to the pageName of the link clicked on
+	// needs the data-page attribute to work
 	$('li[data-page="' + pageName + '"]').addClass('active');
-
-	// add class active to
-	// li with the data-page attr = pageName
-
-	// event handler for the nav links
-	// $('.nav > li').on('click',function(){
-	// 	// remove all classes
-	// 	$('.nav > li').removeClass('active');
-	// 	// if data-page attr is profile.html
-	// 	if($('li[data-page="' + pageName + '"]') === 'profile.html'){
-	// 		$('.nav > li').addClass('active');
-	// 	}
-		
-	// 	$(this).addClass('active');
-	
-	// });
 });

@@ -1,35 +1,36 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
-	  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <title>Document</title>
+      <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.1/css/bootstrap.min.css">
+      <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
-	<nav class="rainbow-border main-nav navbar navbar-default" role="navigation">
-		  <div class="container-fluid">
-			<!-- Brand and toggle get grouped for better mobile display -->
-			<div class="navbar-header">
-			  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-				<span class="sr-only">Toggle navigation</span>
-			  </button>
-			  <a class="navbar-brand" href="#">No BS Dating</a>
-			</div>
 
-			<!-- Collect the nav links, forms, and other content for toggling -->
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			  <ul class="nav navbar-nav">
-					<li data-page="index.html" class="custom-active"><a href="index.html" class="">Home</a></li>
-			  </ul>
-			  <ul class="nav navbar-nav navbar-right">
-				<li data-page="profile.html"><a href="profile.html">Edit/View Profile</a></li>
-				<li><a href="#">Logout</a></li>
-			  </ul>
-			</div><!-- /.navbar-collapse -->
-		  </div><!-- /.container-fluid -->
-		</nav>
+    <nav class="rainbow-border main-nav navbar navbar-default" role="navigation">
+          <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+              </button>
+              <a class="navbar-brand" href="#">No BS Dating</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                    <li data-page="index.html" class="custom-active"><a href="index.html" class="">Home</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <li data-page="profile.html"><a href="profile.html">Edit/View Profile</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
 
 <!-- code from bootsnipp.com   http://bootsnipp.com/snippets/featured/user-profile-widget -->
 <h4 class="text-center">Your Profile!</h4>
@@ -39,42 +40,62 @@
             <div class="well col-md-6 col-md-offset-3">
                 <div class="row">
                     <div class="col-sm-6">
-						<img src="img/andy-profile-1resized.jpg" width="200px" height="200px" class="img-circle" alt="">
+                        <img src="img/andy-profile-1resized.jpg" width="200px" height="200px" class="img-circle" alt="">
                     </div>
                     <div class="col-sm-6 center">
-                        <h4>Andy Lampert</h4>
-							<!-- Display profile form fields -->
-                        	<p class="user-profile-details user-profile-location"><i class="fa fa-map-marker"> Boulder, CO </i></p>
-                        	<p class="user-profile-details user-profile-location"><i class="fa fa-female"></i> Likes <strong>Women</strong></p>
-                        	<p class="user-profile-details user-profile-location"><i class="fa fa-check"></i> Age: <strong>25 - 32</strong></p>
-                        	<p class="user-profile-details user-profile-location"><i class="fa fa-heart-o"></i> Ready for <strong>love!</strong></p>
-							
-							<!-- Editable profile form fields  -->
-							<p><input class="user-editable-field hide user-edit-location" type="text" placeholder="Where are you?"></p>
-							<p>Likes: <select name="" id="" class="user-editable-field hide user-edit-likes">
-								<option value="">Women!</option>
-								<option value="">Men!</option>
-								<option value="">Everyone!</option>
-							</select></p>
-							<p>Age: 
-								<select name="" id="" class="user-editable-field hide user-edit-age-min">
-									<option value="">18</option>
-									<option value="">20</option>
-									<option value="">22</option>
-								</select>
-								<select name="" id="" class="user-editable-field hide user-edit-age-max">
-									<option value="">18</option>
-									<option value="">20</option>
-									<option value="">22</option>
-								</select>
-							</p>
-							<p>
-								Ready for: <select class="user-editable-field hide user-edit-ready">
-								  <option>fun!</option>
-								  <option>dating!</option>
-								  <option>love!</option>
-								</select>
-							</p>
+                        <h4><span id="user-profile-name">not set</span></h4>
+
+                            <!-- Default profile form fields -->
+                            <p class="user-profile-details user-profile-location">
+                                <i class="fa fa-map-marker"></i>
+                                <span id="user-location">Placeholder Location</span> 
+                            </p>
+                            <p class="user-profile-details user-profile-likes">
+                                <i id="likes-gender" class="fa"></i> Likes 
+                                <strong><span id="user-likes">Not set</span></strong>
+                            </p>
+                            <p class="user-profile-details user-profile-age">
+                                <i class="fa fa-check"></i> Age: 
+                                <strong><span id="user-age-min">xx</span> - <span id="user-age-max">xx</span></strong>
+                            </p>
+                            <p class="user-profile-details user-profile-ready">
+                                <i class="fa fa-heart-o"></i> Ready for 
+                                <strong><span id="user-ready-for">Not set</span></strong>
+                            </p>
+                            
+                            <!-- Editable profile form fields  -->
+                            <p><input class="user-editable-field hide user-edit-location" type="text" placeholder="Where are you?"></p>
+
+                            <!-- which gender the user likes -->
+                            <p>Likes: <select name="" id="" class="user-editable-field hide user-edit-likes">
+                                <option value="">Women!</option>
+                                <option value="">Men!</option>
+                                <option value="">Everyone!</option>
+                            </select></p>
+                            
+                            <!-- age of people the user is looking for -->
+                            <p>Age: 
+                                <!-- min age drop down -->
+                                <select name="" id="" class="user-editable-field hide user-edit-age-min">
+                                    <option value="">18</option>
+                                    <option value="">20</option>
+                                    <option value="">22</option>
+                                </select>
+                                <!-- max age drop down -->
+                                <select name="" id="" class="user-editable-field hide user-edit-age-max">
+                                    <option value="">18</option>
+                                    <option value="">20</option>
+                                    <option value="">22</option>
+                                </select>
+                            </p>
+                            <p>
+                                <!-- what the user is 'ready for' -->
+                                Ready for: <select class="user-editable-field hide user-edit-ready">
+                                  <option>fun!</option>
+                                  <option>dating!</option>
+                                  <option>love!</option>
+                                </select>
+                            </p> <!-- end editable profile form fields -->
 
                         <!-- Split button -->
                         <div class="btn-group">
@@ -88,7 +109,8 @@
 </div>  <!-- end bootsnipp code -->
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>
+<script type="text/javascript" src="js/jquery.scrollmagic.min.js"></script>
 <script src="min/main.min.js"></script>
 <!-- <script src="nav.js"></script>
 <script src="profile.js"></script>
