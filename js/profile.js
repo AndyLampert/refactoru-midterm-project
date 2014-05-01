@@ -1,7 +1,14 @@
 $(document).on('ready',function(){
-	$('.user-editable-field').addClass('hide');
 	// event handler for editing profile
 	$('.edit-profile-btn').on('click',function(){
+
+		// SHOW the editable profile container div on edit button click
+		$('#editable-profile').removeClass('hide');
+		// console.log( $('#editable-profile') );
+		// HIDE the display profile container div on edit button click
+		$('#static-profile').addClass('hide');
+		// console.log( $('#static-profile') );
+
 		// if/else  that changes the button text that is less coupled to page content. If I want to change the button text, just change .text() string value.
 		if( $(this).data('state') === 'save'){
 			$(this).data('state','edit');
@@ -11,17 +18,14 @@ $(document).on('ready',function(){
 			$(this).text('Save Changes');
 		}
 
-		// SHOW the editable fields when you click the edit button
-		$('.user-editable-field').removeClass('hide'); 
 		
 		// when the click the button (when the text is 'save changes')
 		// add the .hide class back to the user-editable-field
 		// var saveChanges = $('edit-profile-btn').text()
 		if($('.edit-profile-btn').text() !== 'Save Changes'){
-			$('.user-editable-field').addClass('hide');
+			$('#editable-profile').addClass('hide');
+			$('#static-profile').removeClass('hide');
 		}
-
-
 
 	});
 

@@ -1,15 +1,27 @@
-// init controller
-var controller = new ScrollMagic();
+	var controller;
+	$(document).ready(function($) {
+		// init controller
+		controller = new ScrollMagic({vertical: true});
 
-// assign handler "scene" and add it to Controller
-var scene = new ScrollScene({duration: 100})
-                .addTo(controller);
+		// build tween
+		var tween = new TimelineMax ()
+			.add([
+				TweenMax.fromTo(".bubble", 1, {top: 300}, {top: -150, ease: Linear.easeNone}),
+				// TweenMax.fromTo("#parallaxText .layer2", 1, {scale: 2, autoAlpha: 0.3, top: 150}, {top: -175, ease: Linear.easeNone})
+			]);
 
-// add multiple scenes at once
-var scene2;
-controller.addScene([
-    scene, // add above defined scene
-    scene2 = new ScrollScene({duration: 200}), // add scene and assign handler "scene2"
-    new ScrollScene({offset: 20}) // add anonymous scene
-]);
+		// build scene
+		var firstBubble = new ScrollScene({triggerElement: "#yoga-headstand-legs", duration: $(window).height()})
+						.setTween(tween)
+						.addTo(controller);
+		var secondBubble = new ScrollScene({triggerElement: "#yoga-headstand-legs", duration: $(window).height()})
+						.setTween(tween)
+						.addTo(controller);
+		var thirdBubble = new ScrollScene({triggerElement: "#yoga-headstand-legs", duration: $(window).height()})
+						.setTween(tween)
+						.addTo(controller);
+		var forthBubble = new ScrollScene({triggerElement: "#yoga-headstand-legs", duration: $(window).height()})
+						.setTween(tween)
+						.addTo(controller);
 
+	});

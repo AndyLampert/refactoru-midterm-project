@@ -15,8 +15,13 @@
   margin-bottom: 0;
 }
 
+body {
+  overflow-y: scroll;
+}
+
 .custom-btn {
   width: 60%;
+  color: #ecf0f1;
   background-color: #ff832b;
 }
 .custom-btn:active, .custom-btn:visited, .custom-btn:focus {
@@ -26,8 +31,16 @@
   background: #ffbf91;
 }
 
+.profile-btn {
+  width: 210px !important;
+}
+
 .custom-wide-btn {
   width: 100%;
+  border: none;
+}
+.custom-wide-btn:hover, .custom-wide-btn:active, .custom-wide-btn:focus {
+  border: none;
 }
 
 .form-control {
@@ -128,4 +141,17 @@
 
 .site-title-header {
   margin: 0;
+}
+
+#static-profile p,
+#editable-profile p {
+  min-height: 26px;
+  position: relative;
+  padding-left: 2.2rem;
+}
+#static-profile p i,
+#editable-profile p i {
+  position: absolute;
+  left: 0;
+  top: 2px;
 }

@@ -39,68 +39,80 @@
 
             <div class="well col-md-6 col-md-offset-3">
                 <div class="row">
-                    <div class="col-sm-6">
-                        <img src="img/andy-profile-1.jpg" width="200px" height="200px" class="img-circle" alt="">
+                    <div class="col-xs-6">
+                        <img src="img/andy-profile.jpg" width="200px" height="200px" class="img-circle" alt="">
                     </div>
-                    <div class="col-sm-6 center">
+                    <div class="col-xs-6 center">
                         <h4><span data-user-userName="user-profile-name">not set</span></h4>
 
                             <!-- Default profile form fields -->
-                            <p class="user-profile-details user-profile-location">
-                                <i class="fa fa-map-marker"></i>
-                                <span data-user-location="user-location">Placeholder Location</span> 
-                            </p>
-                            <p class="user-profile-details user-profile-likes">
-                                <i id="likes-gender" class="fa"></i> Likes 
-                                <strong><span data-user-likes="user-likes">Not set</span></strong>
-                            </p>
-                            <p class="user-profile-details user-profile-age">
-                                <i class="fa fa-check"></i> Age: 
-                                <strong><span data-user-agePrefMin="user-age-min">xx</span> - <span data-user-agePrefMax="user-age-max">xx</span></strong>
-                            </p>
-                            <p class="user-profile-details user-profile-ready">
-                                <i class="fa fa-heart-o"></i> Ready for 
-                                <strong><span data-user-readyFor="user-ready-for">Not set</span></strong>
-                            </p>
+                            <div id="static-profile">
+                                <p class="user-profile-details user-profile-location">
+                                    <i class="fa fa-map-marker"></i>
+                                    <span data-user-location="user-location">Placeholder Location</span> 
+                                </p>
+                                <p class="user-profile-details user-profile-likes">
+                                    <i id="likes-gender" class="fa fa-group"></i> Likes 
+                                    <strong><span data-user-likes="user-likes">Not set</span></strong>
+                                </p>
+                                <p class="user-profile-details user-profile-age">
+                                    <i class="fa fa-check"></i> Age: 
+                                    <strong><span data-user-agePrefMin="user-age-min">xx</span> - <span data-user-agePrefMax="user-age-max">xx</span></strong>
+                                </p>
+                                <p class="user-profile-details user-profile-ready">
+                                    <i class="fa fa-heart-o"></i> Ready for 
+                                    <strong><span data-user-readyFor="user-ready-for">Not set</span></strong>
+                                </p>
+                            </div>
                             
                             <!-- Editable profile form fields  -->
-                            <p><input class="user-editable-field hide user-edit-location" type="text" placeholder="Where are you?"></p>
+                            <div class="hide" id="editable-profile">
+                                <p>
+                                    <i class="fa fa-map-marker"></i>
+                                    <input class="user-editable-field user-edit-location" type="text" placeholder="Where are you?"></p>
 
-                            <!-- which gender the user likes -->
-                            <p>Likes: <select name="" id="" class="user-editable-field hide user-edit-likes">
-                                <option value="">Women!</option>
-                                <option value="">Men!</option>
-                                <option value="">Everyone!</option>
-                            </select></p>
-                            
-                            <!-- age of people the user is looking for -->
-                            <p>Age: 
-                                <!-- min age drop down -->
-                                <select name="" id="" class="user-editable-field hide user-edit-age-min">
-                                    <option value="">18</option>
-                                    <option value="">20</option>
-                                    <option value="">22</option>
-                                </select> - 
-                                <!-- max age drop down -->
-                                <select name="" id="" class="user-editable-field hide user-edit-age-max">
-                                    <option value="">18</option>
-                                    <option value="">20</option>
-                                    <option value="">22</option>
-                                </select>
-                            </p>
-                            <p>
+                                <!-- which gender the user likes -->
+                                <p>
+                                    <i class="fa fa-group"></i>
+                                    Likes: <select name="" id="" class="user-editable-field user-edit-likes">
+                                    <option value="">Women</option>
+                                    <option value="">Men</option>
+                                    <option value="">Everyone</option>
+                                    </select>
+                                </p>
+                                
+                                <!-- age of people the user is looking for -->
+                                <p>
+                                    <i class="fa fa-check"></i>
+                                    Age: 
+                                    <!-- min age drop down -->
+                                    <select name="" id="" class="user-editable-field user-edit-age-min">
+                                        <option value="">18</option>
+                                        <option value="">20</option>
+                                        <option value="">22</option>
+                                    </select> - 
+                                    <!-- max age drop down -->
+                                    <select name="" id="" class="user-editable-field user-edit-age-max">
+                                        <option value="">18</option>
+                                        <option value="">20</option>
+                                        <option value="">22</option>
+                                    </select>
+                                </p>
+                                <p>
+                                    <i class="fa fa-heart-o"></i>
                                 <!-- what the user is 'ready for' -->
-                                Ready for: <select class="user-editable-field hide user-edit-ready">
-                                  <option>fun!</option>
-                                  <option>dating!</option>
-                                  <option>love!</option>
-                                </select>
-                            </p> <!-- end editable profile form fields -->
+                                    Ready for: <select class="user-editable-field user-edit-ready">
+                                      <option>fun!</option>
+                                      <option>dating!</option>
+                                      <option>love!</option>
+                                    </select>
+                                </p> <!-- end editable profile form fields -->
+                            </div>
 
                         <!-- Split button -->
-                        <div class="btn-group">
-                            <button type="button" class="btn btn-primary edit-profile-btn">Edit Profile</button>
-                            <button type="button" class="btn btn-primary">Go Find People!</button>
+                        <div class="btn-group-vertical">
+                            <button type="button" class="btn btn-default profile-btn custom-btn edit-profile-btn">Edit Profile</button>
+                            <button type="button" class="btn btn-default profile-btn custom-btn">Go Find People!</button>
                         </div>
                     </div>
                 </div>
@@ -109,7 +121,7 @@
 </div>  <!-- end bootsnipp code -->
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/TweenMax.min.js"></script>
 <script type="text/javascript" src="js/scrollmagic.js"></script>
 <script src="min/main.min.js"></script>

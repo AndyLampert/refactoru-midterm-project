@@ -8,16 +8,16 @@ $(document).ready(function(){
 
 	// constructor stuff
 	// (userName,location,likes,agePrefMin,agePrefMax,readyFor)
-	var testUserAndy = new User('Andy Lampert','Boulder, CO','Everyone',26,32,'anything!');
+	var testUserAndy = new User('Andy Lampert','Boulder, CO','Women',26,32,'love!');
 	var testUserJane = new User('Jane What\'s her face','Boulder, CO','Men',20,40,'fun!');
-	var testUserNick = new User('Nick W-something','Denver, CO','Everyone',42,48,'fun!');
+	var testUserJohn = new User('John what\'s his face','Denver, CO','Everyone',42,48,'fun!');
 
 	// key -> my custom name of each user (arb name)
 	// value -> the actual user object variable
 	var allUsers = {
 		'Andy':testUserAndy,
-		'Raine':testUserRaine,
-		'Nick':testUserNick
+		'Jane':testUserJane,
+		'John':testUserJohn
 	}
 
 	// splits the query string by = (meaning that the userName is going to be the last index of the new array)
@@ -27,7 +27,10 @@ $(document).ready(function(){
 	windowSearch[lastIndex];
 
 	// console log the user represented by the value windowSearch[lastIndex];
-	console.log(windowSearch[lastIndex]);
+	// console.log(windowSearch[lastIndex]);
+
+	console.log( allUsers[windowSearch[lastIndex]] );
+
 
 	// allUsers -> object with my users
 	// allUsers['Andy'] -> testUserAndy
@@ -36,22 +39,8 @@ $(document).ready(function(){
 	allUsers[window.location.search.substring(1)]
 
 	console.log( allUsers[window.location.hash.substring(1)] );
-	// (when assigning) . always makes something up
-	// only works because window is a global object (in the browser)
-	// window.t = testUser; // this is ONLY a test
-	// t is an instance
 
-	// if likes women (testUser.likes === 'women') add fa-female
-
-
-	// DONE - change the ids to data attr data-user-[property name]
-	// 	 property name has to EXACTLY match what is in the user object (User)
-	// replace code in renderUser with a 'for in' loop that loops over each key/value pair in the User object
-	// use the key to gen a dynamic jquery selector based on the property name
-	// 	ex: $('[data-user-location]')   <--- selector that needs to be dynamically generated
-	// 	replace the 'location' part with whichever part the loop is on.
-	//  use that selector to select the element and change the text of that element to the value of the property from the User object
-	
+	// window.t = testUser; // this is ONLY a test (t is an instance)
 
 	var renderUser = function(user){
 		
@@ -71,14 +60,27 @@ $(document).ready(function(){
 		// $('#user-age-max').text(user.agePrefMax);
 		// $('#user-ready-for').text(user.readyFor);
 
-		// if likes both add both icons
-		$('#likes-gender').addClass(user.likes === 'Women' ? 'fa-female':'fa-male');
-		// $('#likes-gender').addClass(user.likes === 'Everything' ? 'fa-female fa-male': false);
+		// if likes women, add women icon. If not, add male
+		// if likes everything, add both icons
+		
+		if ( user.likes === 'Everyone') {
+			$('#likes-gender').addClass('fa-group');
+		} else {
+			$('#likes-gender').addClass(user.likes === 'Women' ? 'fa-female':'fa-male');
+		}
+
+		// another, more complicated way to do the same as above (ternary within a ternary)
+		// $('#likes-gender').addClass(user.likes === 'Everyone' ? 'fa-group': (user.likes === 'Women' ? 'fa-female' : 'fa-male'))
+
 	}
 	// calls the function, would typically call on a server call or w/e
 	// render value represented by key found in hash string 
 	// 
-	renderUser(testUserNick);
+	// renderUser(testUserJohn);
+	
+	if(pageName === 'profile.html') {
+		renderUser(allUsers[windowSearch[lastIndex]])
+	}
 
 	// setting images to look like backgrounds using backstretch
 	$("#yoga-headstand-legs").backstretch("img/yoga-headstand-legs.jpg");
