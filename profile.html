@@ -49,19 +49,20 @@
                             <div id="static-profile">
                                 <p class="user-profile-details user-profile-location">
                                     <i class="fa fa-map-marker"></i>
-                                    <span data-user-location="user-location">Placeholder Location</span> 
+                                    <span class="set-user-location" data-user-location="user-location">Placeholder Location</span> 
                                 </p>
                                 <p class="user-profile-details user-profile-likes">
                                     <i id="likes-gender" class="fa fa-group"></i> Likes 
-                                    <strong><span data-user-likes="user-likes">Not set</span></strong>
+                                    <strong><span class="set-user-likes" data-user-likes="user-likes">Not set</span></strong>
                                 </p>
                                 <p class="user-profile-details user-profile-age">
                                     <i class="fa fa-check"></i> Age: 
-                                    <strong><span data-user-agePrefMin="user-age-min">xx</span> - <span data-user-agePrefMax="user-age-max">xx</span></strong>
+                                    <strong><span class="set-user-age-min" data-user-agePrefMin="user-age-min">xx</span> - 
+                                    <span class="set-user-age-max" data-user-agePrefMax="user-age-max">xx</span></strong>
                                 </p>
                                 <p class="user-profile-details user-profile-ready">
                                     <i class="fa fa-heart-o"></i> Ready for 
-                                    <strong><span data-user-readyFor="user-ready-for">Not set</span></strong>
+                                    <strong><span class="set-user-ready-for" data-user-readyFor="user-ready-for">Not set</span></strong>
                                 </p>
                             </div>
                             
@@ -73,11 +74,11 @@
 
                                 <!-- which gender the user likes -->
                                 <p>
-                                    <i class="fa fa-group"></i>
+                                    <i class="icon-gender fa fa-group"></i>
                                     Likes: <select name="" id="" class="user-editable-field user-edit-likes">
-                                    <option value="">Women</option>
-                                    <option value="">Men</option>
-                                    <option value="">Everyone</option>
+                                    <option>Women</option>
+                                    <option>Men</option>
+                                    <option>Everyone</option>
                                     </select>
                                 </p>
                                 
@@ -87,15 +88,9 @@
                                     Age: 
                                     <!-- min age drop down -->
                                     <select name="" id="" class="user-editable-field user-edit-age-min">
-                                        <option value="">18</option>
-                                        <option value="">20</option>
-                                        <option value="">22</option>
                                     </select> - 
                                     <!-- max age drop down -->
                                     <select name="" id="" class="user-editable-field user-edit-age-max">
-                                        <option value="">18</option>
-                                        <option value="">20</option>
-                                        <option value="">22</option>
                                     </select>
                                 </p>
                                 <p>

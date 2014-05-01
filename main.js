@@ -8,7 +8,7 @@ $(document).ready(function(){
 
 	// constructor stuff
 	// (userName,location,likes,agePrefMin,agePrefMax,readyFor)
-	var testUserAndy = new User('Andy Lampert','Boulder, CO','Women',26,32,'love!');
+	var testUserAndy = new User('Andy Lampert','Boulder, CO','Everyone',26,32,'love!');
 	var testUserJane = new User('Jane What\'s her face','Boulder, CO','Men',20,40,'fun!');
 	var testUserJohn = new User('John what\'s his face','Denver, CO','Everyone',42,48,'fun!');
 
@@ -28,8 +28,7 @@ $(document).ready(function(){
 
 	// console log the user represented by the value windowSearch[lastIndex];
 	// console.log(windowSearch[lastIndex]);
-
-	console.log( allUsers[windowSearch[lastIndex]] );
+	// console.log( allUsers[windowSearch[lastIndex]] );
 
 
 	// allUsers -> object with my users
@@ -37,9 +36,7 @@ $(document).ready(function(){
 	// [] -> needs the key name in a string that corrolates to the value that I want
 	// [window.location.search.substring(1)] -> 
 	allUsers[window.location.search.substring(1)]
-
-	console.log( allUsers[window.location.hash.substring(1)] );
-
+	// console.log( allUsers[window.location.hash.substring(1)] );
 	// window.t = testUser; // this is ONLY a test (t is an instance)
 
 	var renderUser = function(user){
@@ -62,7 +59,6 @@ $(document).ready(function(){
 
 		// if likes women, add women icon. If not, add male
 		// if likes everything, add both icons
-		
 		if ( user.likes === 'Everyone') {
 			$('#likes-gender').addClass('fa-group');
 		} else {
@@ -79,7 +75,11 @@ $(document).ready(function(){
 	// renderUser(testUserJohn);
 	
 	if(pageName === 'profile.html') {
-		renderUser(allUsers[windowSearch[lastIndex]])
+		if (windowSearch[lastIndex] === ''){
+			renderUser(allUsers['Andy']);
+		} else {
+			renderUser(allUsers[windowSearch[lastIndex]]);
+		}
 	}
 
 	// setting images to look like backgrounds using backstretch
@@ -138,11 +138,15 @@ $(document).ready(function(){
 	$(document).on('click','.close-lightbox-link',function(){
 		// hide the lightbox
 		$(this).closest('.lightbox-container').css('display','none');
+		$('.signup-btn').show();
+		$('.bubble').show();
 	});
 
 	// sign up button click event handler
 	$(document).on('click','.signup-btn',function(){
 		$('.lightbox-container').css('display','inline-block');
+		$(this).hide();
+		$('.bubble').hide();
 	});
 
 	// click through registration click event handler

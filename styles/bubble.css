@@ -1,5 +1,5 @@
 .bubble {
-	position: relative;
+	position: absolute;
 	/*width: 250px;*/
 	/*height: 60px;*/
 	padding: 1rem;
@@ -9,7 +9,27 @@
 	-moz-border-radius: 10px;
 	border-radius: 10px;
 	border: #7F7F7F solid 3px;
+	white-space: nowrap;
+	font-size: 120%;
+	font-weight: bold;
 }
+
+.bubble {
+
+}
+
+.first-bubble {
+	left: 0;
+}
+
+.second-bubble {
+	left: 20%;
+}
+
+.third-bubble {
+	right: 10%;
+}
+
 
 /*.bubble:after {
 	content: '';
