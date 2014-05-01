@@ -40,27 +40,27 @@
             <div class="well col-md-6 col-md-offset-3">
                 <div class="row">
                     <div class="col-sm-6">
-                        <img src="img/andy-profile-1resized.jpg" width="200px" height="200px" class="img-circle" alt="">
+                        <img src="img/andy-profile-1.jpg" width="200px" height="200px" class="img-circle" alt="">
                     </div>
                     <div class="col-sm-6 center">
-                        <h4><span id="user-profile-name">not set</span></h4>
+                        <h4><span data-user-userName="user-profile-name">not set</span></h4>
 
                             <!-- Default profile form fields -->
                             <p class="user-profile-details user-profile-location">
                                 <i class="fa fa-map-marker"></i>
-                                <span id="user-location">Placeholder Location</span> 
+                                <span data-user-location="user-location">Placeholder Location</span> 
                             </p>
                             <p class="user-profile-details user-profile-likes">
                                 <i id="likes-gender" class="fa"></i> Likes 
-                                <strong><span id="user-likes">Not set</span></strong>
+                                <strong><span data-user-likes="user-likes">Not set</span></strong>
                             </p>
                             <p class="user-profile-details user-profile-age">
                                 <i class="fa fa-check"></i> Age: 
-                                <strong><span id="user-age-min">xx</span> - <span id="user-age-max">xx</span></strong>
+                                <strong><span data-user-agePrefMin="user-age-min">xx</span> - <span data-user-agePrefMax="user-age-max">xx</span></strong>
                             </p>
                             <p class="user-profile-details user-profile-ready">
                                 <i class="fa fa-heart-o"></i> Ready for 
-                                <strong><span id="user-ready-for">Not set</span></strong>
+                                <strong><span data-user-readyFor="user-ready-for">Not set</span></strong>
                             </p>
                             
                             <!-- Editable profile form fields  -->
@@ -80,7 +80,7 @@
                                     <option value="">18</option>
                                     <option value="">20</option>
                                     <option value="">22</option>
-                                </select>
+                                </select> - 
                                 <!-- max age drop down -->
                                 <select name="" id="" class="user-editable-field hide user-edit-age-max">
                                     <option value="">18</option>
@@ -110,7 +110,8 @@
 
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script><script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.7/TweenMax.min.js"></script>
-<script type="text/javascript" src="js/jquery.scrollmagic.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.6/TweenMax.min.js"></script>
+<script type="text/javascript" src="js/scrollmagic.js"></script>
 <script src="min/main.min.js"></script>
 <!-- <script src="nav.js"></script>
 <script src="profile.js"></script>
