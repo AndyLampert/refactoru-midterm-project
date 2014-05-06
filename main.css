@@ -31,8 +31,13 @@ body {
   background: #ffbf91;
 }
 
+.main-signup-btn {
+  width: 150px;
+}
+
 .profile-btn {
   width: 210px !important;
+  border-radius: 10px;
 }
 
 .custom-wide-btn {
@@ -156,6 +161,11 @@ body {
   top: 3px;
 }
 
-.main-signup-btn {
-  width: 150px;
+.profile-btn-top {
+  border-top-right-radius: 10px !important;
+}
+
+.profile-btn-bottom {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
 }

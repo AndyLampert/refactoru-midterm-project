@@ -36,6 +36,7 @@ $(document).on('ready',function(){
 
 		// change the gender icon to a question mark when profile is editable
 		$('#likes-gender').removeClass('fa-female fa-male fa-group');
+		$('.icon-gender').removeClass('fa-group');
 		$('.icon-gender').addClass('fa-question-circle');
 		// takes the select likes value and updates the user profile
 		var newLikes = $('.user-edit-likes').val();
@@ -49,17 +50,12 @@ $(document).on('ready',function(){
 			$('#likes-gender').addClass('fa-group');
 		}
 
-		// newLikes === 'Women' ? newLikes.addClass('fa-female'):newLikes.addClass('fa-male')
-			// $('#likes-gender').addClass('fa-female');
-
 		// takes input location value and updates the user profile
 		var newLocation = $('.user-edit-location').val();
 		// if the '.user-edit-location' is empty, don't update the value
 		if( $('.user-edit-location').val() !== '' ){
 			$('.set-user-location').text(newLocation);
 		}
-
-
 
 		// takes the user-edit-age-min and updates the user profile
 		var newMinAge = $('.user-edit-age-min').val();

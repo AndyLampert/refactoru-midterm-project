@@ -39,7 +39,7 @@ body {
     overflow-y: scroll;
 }
 
-// Custom Button 
+// Custom Buttons
 .custom-btn {
     width: 60%;
     color: $cloudy;
@@ -54,8 +54,13 @@ body {
     }
 }
 
+.main-signup-btn {
+    width: 150px;
+}
+
 .profile-btn {
     width: 210px !important;
+    border-radius: 10px;
 }
 
 .custom-wide-btn {
@@ -68,13 +73,11 @@ body {
     }
 }
 
+// overriding bootstrap form styles
 .form-control {
     margin: 1rem 0;
 }
 
-.form-control:hover {
-
-}
 // custom lightbox
 .lightbox-container {
      z-index: 3;
@@ -117,7 +120,7 @@ body {
      }
 }
 
-// Cancel Registration link text in the lightbox
+// Cancel registration link text in the lightbox
 .close-lightbox-link {
     color: darken($flatGreen, 20%);
     cursor: pointer;
@@ -127,13 +130,13 @@ body {
     }
 }
 
-// padding on the lightbox error messages
+// lightbox error messages
 .alert-danger {
     text-align: left;
     line-height: 1.4;
 }
 
-// Nav bar
+// main navbar
 .main-nav {
     border: 0;
     border-radius: 0;
@@ -141,16 +144,12 @@ body {
     border-bottom: 4px solid black;
 }
 
+// changing navbar link styles
 .active>a {
     background-color: lighten($orange, 20%) !important;
     &:hover {
         background-color: $orange !important;
     }
-}
-
-.navbar-brand {
-    // position: absolute;
-    // left: 50%;
 }
 
 .navbar-nav > li > a:hover {
@@ -167,10 +166,6 @@ body {
     display: block;
 }
 
-.user-editable-field {
-    // display: none;
-}
-
 // removing default padding and other styles
 .page-header {
     padding: 0 !important;
@@ -182,10 +177,12 @@ body {
     z-index: 200;
 }
 
+// removing margin so the background image scrolling effect works
 .site-title-header {
     margin: 0;
 }
 
+// styles to make the layout of the profile in view/edit mode the same
 #static-profile p,
 #editable-profile p {
     min-height: 26px;
@@ -198,12 +195,14 @@ body {
     }
 }
 
-.main-signup-btn {
-    width: 150px;
+.profile-btn-top {
+    border-top-right-radius: 10px !important; 
 }
 
-//
-
+.profile-btn-bottom {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
 // .navbar {
 //     width:600px;
 //     margin:0 auto;

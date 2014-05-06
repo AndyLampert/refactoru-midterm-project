@@ -14,10 +14,6 @@
 	font-weight: bold;
 }
 
-.bubble {
-
-}
-
 .first-bubble {
 	left: 0;
 }
@@ -29,7 +25,6 @@
 .third-bubble {
 	right: 10%;
 }
-
 
 /*.bubble:after {
 	content: '';
