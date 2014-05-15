@@ -1,0 +1,65 @@
+extends layout
+
+block content
+
+	//- passport
+	nav.rainbow-border.main-nav.navbar.navbar-default(role='navigation')
+		.container-fluid
+			// Brand and toggle get grouped for better mobile display
+			.navbar-header
+				button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+					span.sr-only Toggle navigation
+				a.navbar-brand(href='#') It's ok to be you dating!
+			// Collect the nav links, forms, and other content for toggling
+			#bs-example-navbar-collapse-1.collapse.navbar-collapse
+				ul.nav.navbar-nav
+					li.custom-active(data-page='')
+						a(href='/') Home
+				ul.nav.navbar-nav.navbar-right
+					li(data-page='people-search')
+						a(href='/people-search') Go Find People!
+					li(data-page='profile')
+						a(href='/profile') Edit/View Profile
+					li
+						a(href='#') Logout
+			// /.navbar-collapse
+		// /.container-fluid
+	.container.page-header
+		// <h1 class="center text-center site-title-header">SITE NAME</h1>
+		.row
+			.text-center.center-block
+				p.bubble.first-bubble Nice legs! Now show me what you actually look like!
+				p.bubble.second-bubble Yeah, I dig snowboarding too! Still can't see your face... 
+				p.bubble.third-bubble Oh, more yoga pics. Wonderful.
+				button.main-signup-btn.signup-btn.custom-btn.btn.btn-default.btn-lg.btn-block.pull-right Sign Up Now!
+	#yoga-headstand-legs.background-wrapper
+	#snowboard-girl.background-wrapper
+	// <div id="party-girls-1" class="background-wrapper"></div>
+	#yoga-faraway.background-wrapper
+	.container
+		.lightbox-container
+			.lightbox
+				.lightbox-alert.row
+					.col-sm-6.text-center.center-div
+						form(action='')
+							h4 Enter your: 
+							.form-group
+								input#user-name.form-control(type='text', placeholder='User Name')
+								input#user-email.form-control(type='text', placeholder='Email')
+								input#user-password.form-control(type='password', placeholder='Password')
+								input#user-password-check.form-control(type='password', placeholder='Password Confirmation')
+							.hide.alert.alert-danger
+								p#user-name-error.bg-danger Don't forget your User Name!
+								p#user-name-length-error.bg-danger Your User Name needs to be between 6-18 characters!
+								p#email-empty-error.bg-danger Don't forget your Email!
+								p#email-invalid-error.bg-danger Invalid Email!
+								p#password-empty-error.bg-danger Don't forget your Password!
+								p#password-confirm-error.bg-danger Please confirm your Password!
+								p#password-match-error.bg-danger Passwords don't match!
+					.col-sm-6.text-center
+						h4 Say goodbye to these:
+						img.img-circle(src='img/yoga-behind.jpg', width='200px', height='200px', alt='')
+						button.custom-btn.custom-wide-btn.finish-registration.btn.btn-default.form-control(type='submit') Sign Up Now!
+						div
+							a.close-lightbox-link Cancel Registration
+

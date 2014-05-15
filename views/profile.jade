@@ -1,0 +1,95 @@
+extends layout
+
+block content
+  nav.rainbow-border.main-nav.navbar.navbar-default(role='navigation')
+    .container-fluid
+      // Brand and toggle get grouped for better mobile display
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1')
+          span.sr-only Toggle navigation
+        a.navbar-brand(href='#') No BS Dating
+      // Collect the nav links, forms, and other content for toggling
+      #bs-example-navbar-collapse-1.collapse.navbar-collapse
+        ul.nav.navbar-nav
+          li.custom-active(data-page='index.html')
+            a(href='index.html') Home
+        ul.nav.navbar-nav.navbar-right
+          li(data-page='people-search.html')
+            a(href='people-search.html') Go Find People!
+          li(data-page='profile.html')
+            a(href='profile.html') Edit/View Profile
+          li
+            a(href='#') Logout
+      // /.navbar-collapse
+    // /.container-fluid
+  // code from bootsnipp.com   http://bootsnipp.com/snippets/featured/user-profile-widget
+  h4.text-center Your Profile!
+  .container
+    .row
+      .well.col-md-6.col-md-offset-3
+        .row
+          .col-xs-6
+            img.img-circle(src='img/andy-profile.jpg', width='200px', height='200px', alt='')
+          .col-xs-6.center
+            h4
+              span(data-user-username='user-profile-name') not set
+            // Default profile form fields
+            #static-profile
+              p.user-profile-details.user-profile-location
+                i.fa.fa-map-marker
+                span.set-user-location(data-user-location='user-location') Placeholder Location
+              p.user-profile-details.user-profile-likes
+                i#likes-gender.fa.fa-group
+                | Likes 
+                strong
+                  span.set-user-likes(data-user-likes='user-likes') Not set
+              p.user-profile-details.user-profile-age
+                i.fa.fa-check
+                | Age: 
+                strong
+                  span.set-user-age-min(data-user-ageprefmin='user-age-min') xx
+                  | -
+                  span.set-user-age-max(data-user-ageprefmax='user-age-max') xx
+              p.user-profile-details.user-profile-ready
+                i.fa.fa-heart-o
+                | Ready for 
+                strong
+                  span.set-user-ready-for(data-user-readyfor='user-ready-for') Not set
+            // Editable profile form fields
+            #editable-profile.hide
+              p
+                i.fa.fa-map-marker
+                input.user-editable-field.user-edit-location(type='text', placeholder='Where are you?')
+              // which gender the user likes
+              p
+                i.icon-gender.fa.fa-group
+                | Likes: 
+                select.user-editable-field.user-edit-likes(name='')
+                  option Women
+                  option Men
+                  option Everyone
+              // age of people the user is looking for
+              p
+                i.fa.fa-check
+                | Age: 
+                // min age drop down
+                select.user-editable-field.user-edit-age-min(name='')
+                |  - 
+                // max age drop down
+                select.user-editable-field.user-edit-age-max(name='')
+              p
+                i.fa.fa-heart-o
+                // what the user is 'ready for'
+                | Ready for: 
+                select.user-editable-field.user-edit-ready
+                  option fun!
+                  option dating!
+                  option love!
+              // end editable profile form fields
+            // Split button
+            .btn-group-vertical
+              button.btn.btn-default.profile-btn.custom-btn.edit-profile-btn.profile-btn-top(type='button') Edit Profile
+              a(href='people-search.html')
+                button.btn.btn-default.profile-btn.custom-btn.profile-btn-bottom(type='button') Go Find People!
+
+

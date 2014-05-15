@@ -1,8 +1,8 @@
-//@prepros-prepend js/nav.js
-//@prepros-prepend js/profile.js
-//@prepros-prepend js/constructor.js
-//@prepros-prepend js/backstretch.js
-//@prepros-prepend js/bubbles.js
+//@prepros-prepend nav.js
+//@prepros-prepend profile.js
+//@prepros-prepend constructor.js
+//@prepros-prepend backstretch.js
+//@prepros-prepend bubbles.js
 
 $(document).ready(function(){
 
